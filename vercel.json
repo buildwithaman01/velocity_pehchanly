@@ -6,7 +6,7 @@
       "use": "@vercel/node"
     },
     {
-      "src": "package.json",
+      "src": "pehchanly-client/package.json",
       "use": "@vercel/static-build",
       "config": { "distDir": "dist" }
     }
@@ -17,8 +17,16 @@
       "destination": "server/server.js"
     },
     {
+      "source": "/assets/(.*)",
+      "destination": "pehchanly-client/assets/$1"
+    },
+    {
+      "source": "/favicon.png",
+      "destination": "pehchanly-client/favicon.png"
+    },
+    {
       "source": "/((?!api/).*)",
-      "destination": "/index.html"
+      "destination": "pehchanly-client/index.html"
     }
   ]
 }
