@@ -1,4 +1,9 @@
 {
+  "name": "pehchanly-velocity",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "cd pehchanly-client && npm install && npm run build"
+  },
   "dependencies": {
     "axios": "^1.14.0",
     "lucide-react": "^1.7.0",
