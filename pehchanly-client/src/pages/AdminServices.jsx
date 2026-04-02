@@ -80,37 +80,37 @@ const AdminServices = () => {
             className="bg-mesh-blue min-h-screen py-48 px-6 lg:px-8 relative overflow-hidden"
         >
             <div className="noise-overlay" />
-            <div className="max-w-7xl mx-auto space-y-16 relative z-10">
-                <div className="flex flex-col md:flex-row justify-between items-end gap-12 mb-20">
+            <div className="max-w-7xl mx-auto space-y-12 md:space-y-16 relative z-10">
+                <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-10 md:gap-12 mb-16 md:mb-20">
                     <div>
-                        <div className="inline-flex items-center space-x-3 px-5 py-2 rounded-xl bg-white/5 border border-white/10 text-white/30 text-[10px] font-black uppercase tracking-[0.4em] mb-10">
+                        <div className="inline-flex items-center space-x-3 px-4 md:px-5 py-2 rounded-xl bg-white/5 border border-white/10 text-white/30 text-[9px] md:text-[10px] font-black uppercase tracking-[0.3em] md:tracking-[0.4em] mb-8 md:mb-10">
                             <Target size={14} className="text-[#FBFC09]" />
                             <span>SERVICES MANAGEMENT TERMINAL</span>
                         </div>
-                        <h1 className="text-7xl md:text-[10rem] font-black text-white tracking-tighter uppercase italic leading-[0.75] mb-4">SERVICE <br /> <span className="text-[#FBFC09]">CATALOG</span></h1>
+                        <h1 className="text-5xl md:text-[10rem] font-black text-white tracking-tighter uppercase italic leading-[0.85] md:leading-[0.75] mb-4">SERVICE <br className="hidden md:block" /> <span className="text-[#FBFC09]">CATALOG</span></h1>
                     </div>
-                    <div className="flex items-center gap-4">
+                    <div className="flex items-center gap-4 w-full md:w-auto">
                         <button 
                             onClick={() => setShowArchived(!showArchived)} 
-                            className={`p-4 rounded-2xl border transition-all ${showArchived ? 'bg-[#FBFC09] text-[#122837] border-[#FBFC09]' : 'bg-white/5 text-white/30 border-white/10 hover:border-white/20'}`}
+                            className={`p-4 md:p-5 rounded-2xl border transition-all ${showArchived ? 'bg-[#FBFC09] text-[#122837] border-[#FBFC09]' : 'bg-white/5 text-white/30 border-white/10 hover:border-white/20'}`}
                             title={showArchived ? "Hide Archived" : "Show Archived"}
                         >
-                            {showArchived ? <ArchiveRestore size={24} /> : <Archive size={24} />}
+                            {showArchived ? <ArchiveRestore size={20} md:size={24} /> : <Archive size={20} md:size={24} />}
                         </button>
-                        <button onClick={() => handleOpenModal()} className="glass-button bg-white text-[#122837] hover:bg-[#FBFC09] min-w-[320px] h-[85px] shadow-2xl group">
-                            <Plus size={24} className="mr-3" />
+                        <button onClick={() => handleOpenModal()} className="glass-button bg-white text-[#122837] hover:bg-[#FBFC09] w-full md:min-w-[320px] h-[70px] md:h-[85px] shadow-2xl group text-xs">
+                            <Plus size={20} md:size={24} className="mr-2 md:mr-3" />
                             ADD NEW SERVICE
                         </button>
                     </div>
                 </div>
 
-                <div className="glass-card rounded-[5rem] border-white/5 overflow-hidden shadow-2xl">
-                    <table className="w-full text-left">
+                <div className="glass-card rounded-[2.5rem] md:rounded-[5rem] border-white/5 overflow-x-auto shadow-2xl">
+                    <table className="w-full text-left min-w-[600px] md:min-w-0">
                         <thead className="bg-white/[0.03] border-b border-white/5">
                             <tr>
-                                <th className="px-16 py-12 text-[10px] font-black text-white/30 uppercase tracking-[0.4em] italic">SERVICE NAME</th>
-                                <th className="px-16 py-12 text-[10px] font-black text-white/30 uppercase tracking-[0.4em] italic text-center">CATEGORY</th>
-                                <th className="px-16 py-12 text-[10px] font-black text-white/30 uppercase tracking-[0.4em] italic text-right">PRICING</th>
+                                <th className="px-8 md:px-16 py-8 md:py-12 text-[8px] md:text-[10px] font-black text-white/30 uppercase tracking-[0.4em] italic">SERVICE NAME</th>
+                                <th className="px-8 md:px-16 py-8 md:py-12 text-[8px] md:text-[10px] font-black text-white/30 uppercase tracking-[0.4em] italic text-center">CATEGORY</th>
+                                <th className="px-8 md:px-16 py-8 md:py-12 text-[8px] md:text-[10px] font-black text-white/30 uppercase tracking-[0.4em] italic text-right">PRICING</th>
                             </tr>
                         </thead>
                         <tbody className="divide-y divide-white/5">
@@ -126,21 +126,21 @@ const AdminServices = () => {
                                             exit={{ opacity: 0 }}
                                             className="hover:bg-white/[0.03] transition-all group"
                                         >
-                                            <td className="px-16 py-16">
-                                                <div className="font-black text-white text-3xl tracking-tighter uppercase italic group-hover:text-[#FBFC09] transition-colors mb-2 leading-none">{service.name}</div>
-                                                <div className="text-[10px] font-black text-white/10 uppercase tracking-[0.3em] transition-colors group-hover:text-white/40">{service.techStack.join(' • ')}</div>
+                                            <td className="px-8 md:px-16 py-10 md:py-16">
+                                                <div className="font-black text-white text-xl md:text-3xl tracking-tighter uppercase italic group-hover:text-[#FBFC09] transition-colors mb-2 leading-none whitespace-nowrap">{service.name}</div>
+                                                <div className="text-[8px] md:text-[10px] font-black text-white/10 uppercase tracking-[0.3em] transition-colors group-hover:text-white/40">{service.techStack.join(' • ')}</div>
                                             </td>
-                                            <td className="px-16 py-16 text-center">
-                                                <span className="px-6 py-2 bg-[#FBFC09]/10 text-[#FBFC09] text-[9px] font-black rounded-full uppercase tracking-[0.3em] border border-[#FBFC09]/20">
+                                            <td className="px-8 md:px-16 py-10 md:py-16 text-center">
+                                                <span className="px-4 md:px-6 py-2 bg-[#FBFC09]/10 text-[#FBFC09] text-[8px] md:text-[9px] font-black rounded-full uppercase tracking-[0.3em] border border-[#FBFC09]/20">
                                                     {service.category}
                                                 </span>
                                             </td>
-                                            <td className="px-16 py-16 text-right">
-                                                <div className="flex items-center justify-end space-x-12">
-                                                    <span className="text-[#FBFC09] font-black text-4xl italic tracking-tighter">${service.price}</span>
-                                                    <div className="flex space-x-4 opacity-0 group-hover:opacity-100 transition-opacity">
-                                                        <button onClick={() => handleOpenModal(service)} className="p-4 text-white hover:text-[#FBFC09] hover:bg-[#FBFC09]/10 rounded-2xl transition-all"><Edit2 size={22} /></button>
-                                                        <button onClick={() => handleDelete(service._id)} className="p-4 text-white hover:text-red-500 hover:bg-red-500/10 rounded-2xl transition-all"><Trash2 size={22} /></button>
+                                            <td className="px-8 md:px-16 py-10 md:py-16 text-right">
+                                                <div className="flex items-center justify-end space-x-6 md:space-x-12">
+                                                    <span className="text-[#FBFC09] font-black text-2xl md:text-4xl italic tracking-tighter">${service.price}</span>
+                                                    <div className="flex space-x-2 md:space-x-4 opacity-0 group-hover:opacity-100 transition-opacity">
+                                                        <button onClick={() => handleOpenModal(service)} className="p-2 md:p-4 text-white hover:text-[#FBFC09] hover:bg-[#FBFC09]/10 rounded-xl md:rounded-2xl transition-all"><Edit2 size={18} md:size={22} /></button>
+                                                        <button onClick={() => handleDelete(service._id)} className="p-2 md:p-4 text-white hover:text-red-500 hover:bg-red-500/10 rounded-xl md:rounded-2xl transition-all"><Trash2 size={18} md:size={22} /></button>
                                                     </div>
                                                 </div>
                                             </td>

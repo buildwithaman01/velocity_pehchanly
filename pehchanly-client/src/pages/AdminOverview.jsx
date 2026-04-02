@@ -38,8 +38,8 @@ const AdminOverview = () => {
                             <LayoutDashboard size={16} />
                             <span>AGENCY ADMINISTRATIVE DASHBOARD</span>
                         </div>
-                        <h1 className="text-8xl md:text-[11rem] font-black text-white tracking-tighter uppercase italic leading-[0.75] mb-4 drop-shadow-2xl">ADMIN <br /> <span className="text-[#FBFC09]">PANEL</span></h1>
-                        <p className="text-white/20 font-black uppercase text-[10px] tracking-[0.6em] italic border-l-4 border-[#FBFC09] pl-8 py-2">CENTRAL BUSINESS OVERVIEW</p>
+                        <h1 className="text-5xl md:text-[11rem] font-black text-white tracking-tighter uppercase italic leading-[0.85] md:leading-[0.75] mb-4 drop-shadow-2xl">ADMIN <br className="hidden md:block" /> <span className="text-[#FBFC09]">PANEL</span></h1>
+                        <p className="text-white/20 font-black uppercase text-[8px] md:text-[10px] tracking-[0.4em] md:tracking-[0.6em] italic border-l-4 border-[#FBFC09] pl-4 md:pl-8 py-2">CENTRAL BUSINESS OVERVIEW</p>
                     </div>
                 </motion.div>
 

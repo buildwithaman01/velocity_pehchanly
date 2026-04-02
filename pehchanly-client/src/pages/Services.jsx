@@ -69,28 +69,28 @@ const Services = () => {
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1 }}
-                    className="text-center mb-24"
+                    className="text-center mb-16 md:mb-24"
                 >
-                    <div className="inline-flex items-center space-x-3 px-6 py-2 rounded-full bg-white/5 border border-white/10 text-white/40 text-[10px] font-black uppercase tracking-[0.4em] mb-8">
+                    <div className="inline-flex items-center space-x-3 px-4 md:px-6 py-2 rounded-full bg-white/5 border border-white/10 text-white/40 text-[8px] md:text-[10px] font-black uppercase tracking-[0.3em] md:tracking-[0.4em] mb-6 md:mb-8">
                         <Sparkles size={16} className="text-[#FBFC09] animate-pulse" />
                         <span>Elite Deployment Catalog</span>
                     </div>
-                    <h1 className="text-6xl md:text-[8rem] font-black text-white mb-10 uppercase italic tracking-tighter leading-[0.85]">
-                        CHOOSE YOUR <br /><span className="text-[#FBFC09]">ARSENAL</span>
+                    <h1 className="text-5xl md:text-[8rem] font-black text-white mb-8 md:mb-10 uppercase italic tracking-tighter leading-[0.85] md:leading-[0.85]">
+                        CHOOSE YOUR <br className="hidden md:block" /><span className="text-[#FBFC09]">ARSENAL</span>
                     </h1>
-                    <p className="text-white/30 text-lg md:text-2xl max-w-2xl mx-auto font-medium italic leading-relaxed">
+                    <p className="text-white/30 text-base md:text-2xl max-w-2xl mx-auto font-medium italic leading-relaxed px-4 md:px-0">
                         High-authority growth engines precision-tuned for market domination. 
                         Select your vertical and initiate deployment.
                     </p>
                 </motion.div>
 
                 {/* Filters */}
-                <div className="flex flex-wrap justify-center gap-6 mb-24">
+                <div className="flex flex-wrap justify-center gap-3 md:gap-6 mb-16 md:mb-24 px-4 md:px-0">
                     {categories.map((cat) => (
                         <button
                             key={cat}
                             onClick={() => setFilter(cat)}
-                            className={`px-10 py-5 rounded-full text-[10px] font-black uppercase tracking-[0.3em] transition-all duration-500 border ${
+                            className={`px-6 md:px-10 py-3 md:py-5 rounded-full text-[8px] md:text-[10px] font-black uppercase tracking-[0.2em] md:tracking-[0.3em] transition-all duration-500 border ${
                                 filter === cat 
                                     ? 'bg-[#FBFC09] text-[#122837] border-[#FBFC09] shadow-[0_20px_40px_-10px_rgba(251,252,9,0.4)]' 
                                     : 'bg-white/5 text-white/40 hover:text-white border-white/5 hover:border-white/20 uppercase italic'

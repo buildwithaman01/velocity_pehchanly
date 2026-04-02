@@ -36,26 +36,26 @@ const Login = () => {
                 initial={{ opacity: 0, scale: 0.9, y: 30 }}
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-                className="max-w-md w-full space-y-10 glass-card p-16 rounded-[4rem] border-white/5 relative z-10 shadow-[0_50px_100px_-20px_rgba(0,0,0,0.8)]"
+                className="max-w-md w-full space-y-8 md:space-y-10 glass-card p-8 md:p-16 rounded-[2.5rem] md:rounded-[4rem] border-white/5 relative z-10 shadow-[0_50px_100px_-20px_rgba(0,0,0,0.8)]"
             >
                 <div className="text-center">
                     <motion.div 
                         initial={{ rotate: -20, scale: 0.5 }}
                         animate={{ rotate: 0, scale: 1 }}
                         transition={{ type: "spring", damping: 15 }}
-                        className="mx-auto h-24 w-24 flex items-center justify-center rounded-[2.5rem] bg-[#FBFC09]/10 text-[#FBFC09] border border-[#FBFC09]/20 mb-10 shadow-[0_0_30px_rgba(251,252,9,0.1)]"
+                        className="mx-auto h-20 w-20 md:h-24 md:w-24 flex items-center justify-center rounded-3xl md:rounded-[2.5rem] bg-[#FBFC09]/10 text-[#FBFC09] border border-[#FBFC09]/20 mb-8 md:mb-10 shadow-[0_0_30px_rgba(251,252,9,0.1)]"
                     >
-                        <ShieldCheck size={48} />
+                        <ShieldCheck size={40} md:size={48} />
                     </motion.div>
-                    <h2 className="text-5xl font-black text-white uppercase italic tracking-tighter mb-3 leading-none">
+                    <h2 className="text-4xl md:text-5xl font-black text-white uppercase italic tracking-tighter mb-2 md:mb-3 leading-none">
                         SECURE LOG
                     </h2>
-                    <p className="text-[#FBFC09] font-black uppercase text-[10px] tracking-[0.4em] italic opacity-60">
+                    <p className="text-[#FBFC09] font-black uppercase text-[8px] md:text-[10px] tracking-[0.3em] md:tracking-[0.4em] italic opacity-60">
                         ENTER OPERATIONAL ENCLAVE
                     </p>
                 </div>
                 
-                <form className="mt-16 space-y-10" onSubmit={handleSubmit}>
+                <form className="mt-12 md:mt-16 space-y-8 md:space-y-10" onSubmit={handleSubmit}>
                     <div className="space-y-8">
                         <div className="space-y-3">
                             <label className="block text-[10px] font-black text-white/30 uppercase tracking-[0.3em] ml-2" htmlFor="email">

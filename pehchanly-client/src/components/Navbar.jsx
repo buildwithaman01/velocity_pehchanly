@@ -94,15 +94,15 @@ const Navbar = () => {
                         initial={{ opacity: 0, scale: 0.95 }}
                         animate={{ opacity: 1, scale: 1 }}
                         exit={{ opacity: 0, scale: 0.95 }}
-                        className="fixed inset-x-6 top-32 z-[99] md:hidden"
+                        className="fixed inset-x-4 md:inset-x-6 top-24 md:top-32 z-[99] md:hidden"
                     >
-                        <div className="glass-card rounded-[3.5rem] p-10 border-white/10 shadow-[0_40px_100px_-20px_rgba(0,0,0,0.9)] space-y-6 bg-[#122837]/98 backdrop-blur-3xl">
+                        <div className="glass-card rounded-[2.5rem] md:rounded-[3.5rem] p-6 md:p-10 border-white/10 shadow-[0_40px_100px_-20px_rgba(0,0,0,0.9)] space-y-4 md:space-y-6 bg-[#122837]/98 backdrop-blur-3xl">
                             {navLinks.map((link) => (
                                 <Link 
                                     key={link.name} 
                                     to={link.path} 
                                     onClick={() => setIsOpen(false)}
-                                    className="block text-3xl font-black text-white uppercase italic tracking-tighter border-b border-white/5 pb-6 hover:text-[#FBFC09] transition-colors"
+                                    className="block text-2xl md:text-3xl font-black text-white uppercase italic tracking-tighter border-b border-white/5 pb-4 md:pb-6 hover:text-[#FBFC09] transition-colors"
                                 >
                                     {link.name}
                                 </Link>
@@ -110,7 +110,7 @@ const Navbar = () => {
                             <Link 
                                 to="/login" 
                                 onClick={() => setIsOpen(false)}
-                                className="w-full glass-button h-20 bg-[#FBFC09] text-[#122837] border-[#FBFC09] text-xs font-black uppercase italic"
+                                className="w-full glass-button h-16 md:h-20 bg-[#FBFC09] text-[#122837] border-[#FBFC09] text-[10px] md:text-xs font-black uppercase italic"
                             >
                                 {user ? 'ACCESS DASHBOARD' : 'CLIENT LOGIN'}
                             </Link>
